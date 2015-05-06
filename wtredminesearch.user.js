@@ -16,7 +16,7 @@ function addJQuery(callback) {
 
 	
     var script = document.createElement("script");
-    textContent = "jQuery.expr[':'].contains = function(a, i, m) {  return jQuery(a).text().toUpperCase().indexOf(m[3].toUpperCase()) >= 0;}; jQuery('#searchbyjcdelgado').keyup(function(){ jQuery('tr.odd:not(contains(\"'+this.value+'\")),tr.even:not(contains(\"'+this.value+'\"))').hide(); for (x=0;x < this.value.split(\",\").length; x++) {  jQuery('tr:contains(\"'+this.value.split(\",\")[x]+'\")').show();  } }); ";
+    textContent = "jQuery.expr[':'].contains = function(a, i, m) {  return jQuery(a).text().toUpperCase().indexOf(m[3].toUpperCase()) >= 0;}; jQuery('#searchbyjcdelgado').keyup(function(){ jQuery('tr.odd:not(contains(\"'+this.value+'\")),tr.even:not(contains(\"'+this.value+'\"))').hide(); for (x=0;x < this.value.split(\",\").length; x++) {  jQuery('tr:contains(\"'+this.value.split(\",\")[x]+'\")').show(); jQuery('tr.total').show()  } }); ";
     script.textContent = textContent;
     document.body.appendChild(script);												
 
